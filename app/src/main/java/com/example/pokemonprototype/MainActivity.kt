@@ -31,7 +31,8 @@ class MainActivity : AppCompatActivity() {
     fun fetchPokemon() {
         val pokemonApiCall = RetrofitHelper.getInstance().create(PokeApiService::class.java)
 
-        val randomId = (1..20).random()
+        val randomId = (1..200).random()
+//        val callback = pokemonApiCall.getPokemon(randomId)
         val callback = pokemonApiCall.getPokemon(randomId)
         val pokemonImageView: ImageView = findViewById(R.id.pokemonImageView)
 

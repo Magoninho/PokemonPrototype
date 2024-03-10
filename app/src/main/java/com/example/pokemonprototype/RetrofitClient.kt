@@ -22,9 +22,6 @@ object RetrofitHelper {
 
 // Retrofit interface
 interface PokeApiService {
-    @GET("pokemon")
-    fun listPokemons(@Query("limit") limit: Int): Call<PokemonResults>
-
     @GET("pokemon/{id}")
     fun getPokemon(@Path("id") id: Int): Call<Pokemon>
 }
